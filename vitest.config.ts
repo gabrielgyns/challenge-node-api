@@ -6,10 +6,7 @@ config({ path: ".env.test", override: true });
 
 export default defineConfig({
   test: {
-    env: {
-      NODE_ENV: process.env.NODE_ENV,
-      DATABASE_URL: process.env.DATABASE_URL,
-    },
+    env: process.env,
     reporters: "verbose",
     coverage: {
       enabled: true,
